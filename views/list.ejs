@@ -15,12 +15,12 @@
                     </p>
                 </div>
                 <%})%>
-                    <input type="hidden" name="hiddenInput" value="<%=listTitle%>" />
+                    <input type="hidden" name="listTitle" value="<%=listTitle%>" />
         </form>
         <form action="/" method="post" autocomplete="off">
             <div class="item">
                 <input type="text" name="item" placeholder="New Item" />
-                <button type="submit" value="<%=listTitle%>">+</button>
+                <button type="submit" name="button" value="<%=listTitle%>">+</button>
             </div>
         </form>
     </div>
