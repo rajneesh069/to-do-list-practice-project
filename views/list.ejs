@@ -1,0 +1,28 @@
+<%- include("./partials/header")%>
+    <div class="box">
+        <h1 id="heading">
+            <%=listTitle%>
+        </h1>
+    </div>
+
+    <div class="box">
+        <form action="/delete" method="post" autocomplete="off">
+            <%items.forEach((item)=>{%>
+                <div class="item">
+                    <input type="checkbox" onchange="this.form.submit()" name="id" value="<%=item._id%>" />
+                    <p>
+                        <%=item.name%>
+                    </p>
+                </div>
+                <%})%>
+                    <input type="hidden" name="hiddenInput" value="<%=listTitle%>" />
+        </form>
+        <form action="/" method="post" autocomplete="off">
+            <div class="item">
+                <input type="text" name="item" placeholder="New Item" />
+                <button type="submit" value="<%=listTitle%>">+</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include("./partials/footer")%>
